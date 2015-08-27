@@ -5,7 +5,7 @@ RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 RUN apt-get update && apt-get install -y \
   curl \
   nodejs \
-  python \
+  python2.7 \
   build-essential \
 
 RUN npm install -g strongloop
@@ -13,6 +13,8 @@ RUN npm install -g gulp
 RUN npm install -g jshint
 RUN npm install -g istanbul
 RUN npm install -g source-map
+
+RUN ln -s /usr/bin/python2.7 /usr/bin/python
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN npm cache clean
