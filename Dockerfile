@@ -1,9 +1,9 @@
 FROM gitlab/gitlab-runner
 MAINTAINER Huaming Rao <huaming.rao@gmail.com>
 
-RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
-RUN apt-get update && apt-get install -y \
-  curl \
+RUN apt-get update && apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+RUN apt-get install -y \
   nodejs \
   python2.7 \
   build-essential \
