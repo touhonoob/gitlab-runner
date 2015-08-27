@@ -9,3 +9,4 @@ RUN npm install -g strongloop gulp jshint
 
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN npm cache clean
