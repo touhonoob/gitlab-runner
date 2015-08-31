@@ -1,0 +1,6 @@
+gitlab-ci-runner:
+  build: .
+  links: 
+    - mongodb
+mongodb:
+  image: mongo
